@@ -5,8 +5,9 @@ public class Usuario {
     int id;
     ArrayList<Livro> livrosEmprestados;
 
-    public Usuario(String nome, ArrayList<Livro> livrosEmprestados) {
+    public Usuario(String nome, int id, ArrayList<Livro> livrosEmprestados) {
         this.nome = nome;
+        this.id = id;
         this.livrosEmprestados = livrosEmprestados;
     }
 
@@ -41,6 +42,10 @@ public class Usuario {
     public void exibirDetalhes() {
         System.out.printf("Nome: %s, Id: %d, livrosEmprestados: %s",
                 this.nome, this.id, this.livrosEmprestados);
+    }
+
+    public void exibirIds () {
+        System.out.printf("> %d\n", this.id);
     }
 
     public void adicionarLivro(Livro livro) {
